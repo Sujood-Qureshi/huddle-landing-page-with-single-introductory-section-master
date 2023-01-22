@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+main{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(/images/bg-desktop.svg),linear-gradient(hsl(257, 40%, 49%),hsl(257, 40%, 49%));
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.container{
+    width: 81%;
+    display: flex;
+    flex-direction: column;
+}
+.rowOne .logo > img{
+    width: 10rem;
+    height: auto;
+    margin-bottom: 2rem;
+}
+.rowTwo{
+    display: flex;
+    gap: 4rem;
+}
+.rowTwo .illustration img{
+    width: 40rem;
+}
+.rowTwo .content{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 4rem;
+    /* width: 87%; */
+}
+.content > h1 {
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    line-height: 1.5;
+    color: white;
+}
+.content > p{
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: white;
+}
+.content > a{
+    background: white;
+    color: hsl(257, 40%, 49%);
+    padding: 1rem 1.5rem;
+    border-radius: 30px;
+    width: 12rem;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0px 4px 9px -4px black;
+}
+.rowThree{
+    display: flex;
+    justify-content: end;
+}
+.socials{
+    width: 15%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.socials a > ion-icon{
+    border: 2px solid white;
+    border-radius: 50%;
+    font-size: 22px;
+    padding: 6px;
+    color: white;
+}
+
+/* hover effects  */
+.content > a:hover{
+    background: hsl(300, 69%, 71%);
+    color: white;
+}
+.socials a > ion-icon:hover{
+    border: 2px solid hsl(300, 69%, 71%);
+    color: hsl(300, 69%, 71%);
+}
+
+
+/* media queries  */
+@media screen and (max-width:768px) {
+    main{
+        background: url(/images/bg-mobile.svg),linear-gradient(hsl(257, 40%, 49%),hsl(257, 40%, 49%));
+        background-repeat: no-repeat;
+        background-size: contain;        
+    }
+    .container{
+        gap: 4rem;
+    }
+    .rowOne .logo > img{
+        margin-top: 2rem;
+        margin-bottom: 0rem;
+    }
+    .rowTwo{
+        gap: 2rem;
+        flex-direction: column;
+    }
+    .rowTwo .illustration img{
+        width: 19rem;
+    }
+    .rowTwo .content{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 0rem;
+        text-align: center;
+        align-items: center;
+    }
+    .content > h1 {
+        font-weight: 400;
+        font-size: 1.5rem;
+    }
+    .content > a{
+        padding: 0.5rem 1rem;
+    }
+    .rowThree{
+        justify-content: center;
+        margin-bottom:2rem;
+    }
+    .socials{
+        width: 50%;
+    }
+    .socials a > ion-icon{
+        font-size: 17px;
+    }
+}
